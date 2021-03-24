@@ -1,0 +1,9 @@
+#importing libraries
+import os
+#os.scandir only works for python versions after 3.5
+#os.scandir returns an iterator instead of a list when used
+#os.scandir  loops over the contents of the iterator and prints out the filenames
+# "with" i.e. using the function os.scandir... then enter file path/directory... as 
+with os.scandir('C:/Users/modul/Desktop/Allfiles/') as entries:
+	for entry in entries:
+		print(entry.name)
